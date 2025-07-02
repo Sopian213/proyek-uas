@@ -1,67 +1,75 @@
-# Sistem Manajemen Kursus Online
+# 📚 Kursus Online
 
-Aplikasi web dinamis berbasis PHP dan MySQL untuk mengelola kursus online secara sederhana. Proyek ini dibuat sebagai tugas UAS untuk mata kuliah Pemrograman Web Dinamis.
+Aplikasi web dinamis berbasis PHP & MySQL untuk pengelolaan kursus online.  
+Dibuat sebagai tugas akhir mata kuliah Pemrograman Web.
 
-## ✨ Fitur Utama
+## 🔗 Demo & Dokumentasi
 
-- Login multi-role (Admin, Instruktur, Peserta)
-- CRUD Pengguna, Kursus, Materi
-- Pendaftaran peserta ke kursus (Enroll)
-- Halaman Dashboard dan Layout responsif
-- Laporan data (placeholder)
-- Tampilan rapi dengan Bootstrap 5
-
-## 🛠 Teknologi yang Digunakan
-
-- PHP (Native, versi 7.4+)
-- MySQL (versi 5.7+)
-- HTML, CSS, Bootstrap 5
-- JavaScript (opsional)
-
-## 📁 Struktur Folder
-
-```
-kursus-online/
-├── src/
-│   ├── admin/
-│   ├── auth/
-│   ├── config/
-│   ├── peserta/
-│   └── assets/
-├── sql/
-├── docs/
-└── README.md
-```
-
-## 🚀 Cara Instalasi
-
-1. Clone repository ini ke folder `htdocs` di XAMPP:
-   ```
-   git clone https://github.com/Sopian213/proyek-uas.git
-   ```
-
-2. Import database:
-   - Buka `phpMyAdmin`
-   - Buat database baru: `kursus_online`
-   - Import file SQL dari folder `/sql/kursus_online.sql`
-
-3. Jalankan aplikasi via browser:
-   ```
-   http://localhost/kursus-online/src/auth/login.php
-   ```
-
-## 🔐 Akun Login Demo
-
-| Role      | Email               | Password |
-|-----------|---------------------|----------|
-| Admin     | admin1@mail.com     | admin1   |
-| Peserta   | peserta1@mail.com   | peserta1 |
-
-## 📝 Catatan
-
-- Semua data demo sudah disiapkan di file SQL.
-- Pastikan folder `src/` dan `sql/` ada di struktur repo sebelum presentasi.
+- 🔥 [Link Video Presentasi YouTube](menyusul)
+- 💻 [Repository GitHub](menyusul)
 
 ---
 
-© 2025 Muhammad Sopian. Proyek UAS Pemrograman Web Dinamis.
+## 🚀 Fitur Utama
+
+- 🔐 Login dan logout dengan session PHP
+- 📚 Manajemen kursus dan materi
+- 🧑‍🏫 Role user: admin, instruktur, peserta
+- 📝 Enroll peserta ke kursus
+- 🗂️ Upload materi dan tugas
+- ✅ Penilaian dan feedback peserta
+- 📈 Laporan pendaftaran
+- 📄 ERD dan dokumentasi database
+
+---
+
+## 🗂️ Struktur Folder
+
+```
+/src         → kode utama aplikasi
+/docs        → dokumentasi tambahan (opsional)
+/sql         → file dump database (.sql)
+```
+
+---
+
+## ⚙️ Cara Instalasi
+
+1. Clone repo ini:
+   ```
+   git clone https://github.com/your-username/kursus-online.git
+   ```
+2. Import database `kursus_online.sql` ke phpMyAdmin
+3. Atur koneksi di `src/config/db.php`
+4. Jalankan aplikasi di browser:
+   ```
+   http://localhost/kursus-online/src/
+   ```
+
+---
+
+## 🧠 Struktur Database
+
+| Tabel             | Fungsi                                                                 |
+|-------------------|------------------------------------------------------------------------|
+| `users`           | Menyimpan data akun (admin, instruktur, peserta)                       |
+| `roles`           | Menentukan peran user (1=Admin, 2=Instruktur, 3=Peserta)               |
+| `courses`         | Menyimpan informasi kursus                                             |
+| `categories`      | Kategori untuk mengelompokkan kursus                                   |
+| `course_materials`| Materi pembelajaran yang terkait dengan kursus                         |
+| `enrollments`     | Pendaftaran peserta terhadap kursus tertentu                           |
+| `assignments`     | Tugas yang diberikan instruktur di setiap kursus                       |
+| `submissions`     | Jawaban tugas dari peserta                                             |
+| `feedback`        | Ulasan dan rating dari peserta terhadap kursus                         |
+| `activity_logs`   | Mencatat aktivitas user (login, melihat materi, mendaftar kursus, dll) |
+| `settings`        | Pengaturan umum sistem (opsional)                                      |
+
+### 🔍 Diagram ERD:
+![ERD Sistem Kursus Online](menyusul)
+
+---
+
+## 👨‍💻 Author
+
+> Dibuat oleh: Muhammad Sopian (202312076) 
+> Untuk memenuhi tugas akhir matkul Pemrograman Web 2025.
